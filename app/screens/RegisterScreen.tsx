@@ -9,6 +9,7 @@ import { CustomInputField } from '../components';
 import CustomButton from '../components/CustomButton';
 import DatePicker from 'react-native-date-picker';
 import { useState } from 'react';
+import constants from '../constants/AppConstants';
 
 const RegisterScreen = ({ navigation }) => {
     const [date, setDate] = useState(new Date())
@@ -96,7 +97,7 @@ const RegisterScreen = ({ navigation }) => {
                     }}
                 />
                 <CustomButton label={'REGISTER'}
-                    onPress={() => { }}
+                    onPress={() => { navigation.navigate(constants.NAV_LOGIN) }}
                 />
                 <View style={styles.registerContainer}>
                     <Text style={{ color: '#333' }}>Already Register?</Text>

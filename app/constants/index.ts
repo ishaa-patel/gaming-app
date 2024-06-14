@@ -1,3 +1,4 @@
 /* eslint-disable prettier/prettier */
 import constants from './AppConstants';
-export default { constants };
+import { StorageKeys } from './StorageKeys';
+export default { constants, StorageKeys };

@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable react/react-in-jsx-scope *//* eslint-disable prettier/prettier */
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import constants from '../constants/AppConstants';
-import { HomeScreen, MessageScreen, MomentsScreen, ProfileScreen, SettingScreen } from '../screens';
 import { CustomDrawer } from '../components';
+import constants from '../constants/AppConstants';
+import TabNavigator from './TabNavigator';
+import { MessageScreen, MomentsScreen, ProfileScreen, SettingScreen } from '../screens';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
@@ -13,7 +14,6 @@ const AppStack = () => {
         <Drawer.Navigator
             screenOptions={{
                 headerShown: false,
-                headerLeftLabelVisible: true,
                 drawerActiveBackgroundColor: '#ae0061',
                 drawerActiveTintColor: '#fff',
                 drawerInactiveTintColor: '#333',
@@ -22,7 +22,7 @@ const AppStack = () => {
             drawerContent={props => <CustomDrawer {...props} />}
         >
             <Drawer.Screen name={constants.NAV_HOME}
-                component={HomeScreen}
+                component={TabNavigator}
                 options={{
                     drawerIcon: ({ color }) => (
                         <Ionicons name="home-outline" color={color} size={26} />

@@ -1,3 +1,5 @@
+import AppMainNav from './AppMainNav';
 import AuthStack from "./AuthStack";
 import AppStack from "./AppStack";
-export { AuthStack, AppStack };
+import TabNavigator from "./TabNavigator";
+export { AuthStack, AppStack, TabNavigator, AppMainNav };

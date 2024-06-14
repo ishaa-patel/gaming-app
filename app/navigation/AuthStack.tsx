@@ -2,7 +2,9 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import constants from '../constants/AppConstants';
 import { LoginScreen, OnBoardingScreen, RegisterScreen } from '../screens';
+
 const Stack = createNativeStackNavigator();
+
 const AuthStack = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -11,5 +13,5 @@ const AuthStack = () => {
             <Stack.Screen name={constants.NAV_REGISTER} component={RegisterScreen} />
         </Stack.Navigator>
     );
-}
+};
 export default AuthStack;

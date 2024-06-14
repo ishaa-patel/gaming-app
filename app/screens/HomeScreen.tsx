@@ -70,6 +70,11 @@ export default function HomeScreen({ navigation }) {
                             subTitle={item.subtitle}
                             isFree={item.isFree}
                             price
+                            onPress={() =>
+                                navigation.navigate(constants.GAME_DETAIL, {
+                                    title: item.title, id: item.id,
+                                })
+                            }
                         />
                     ))
                 }
@@ -81,7 +86,13 @@ export default function HomeScreen({ navigation }) {
                             title={item.title}
                             subTitle={item.subtitle}
                             isFree={item.isFree}
-                            price={item.price} />
+                            price={item.price}
+                            onPress={() =>
+                                navigation.navigate(constants.GAME_DETAIL, {
+                                    title: item.title, id: item.id,
+                                })
+                            }
+                        />
                     ))
                 }
             </ScrollView>

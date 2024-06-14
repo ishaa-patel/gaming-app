@@ -7,6 +7,9 @@ import MessageScreen from './MessageScreen';
 import MomentsScreen from './MomentsScreen';
 import SettingScreen from './SettingScreen';
 import RegisterScreen from './RegisterScreen';
+import FavouriteScreen from './FavouriteScreen';
+import CartScreen from './CartScreen';
+import GameDetailScreen from './GameDetailScreen';
 export {
     HomeScreen,
     OnBoardingScreen,
@@ -16,4 +19,7 @@ export {
     MomentsScreen,
     SettingScreen,
     RegisterScreen,
+    FavouriteScreen,
+    CartScreen,
+    GameDetailScreen,
 };

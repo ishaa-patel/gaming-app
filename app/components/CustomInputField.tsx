@@ -1,10 +1,17 @@
 /* eslint-disable prettier/prettier */
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import { styles } from './styles/CustomInputFieldStyle';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 export default function CustomInputField(
-    { label, icon, inputType, keyboardType, fieldButtonLabel, fieldButtonFunction }
+    { label,
+        icon,
+        inputType,
+        keyboardType,
+        fieldButtonLabel,
+        fieldButtonFunction,
+        value,
+        onChangeText
+    }
 ) {
     return (
         <View style={styles.inputField}>
@@ -16,12 +23,16 @@ export default function CustomInputField(
                     keyboardType={keyboardType}
                     secureTextEntry={true}
                     style={styles.input}
+                    value={value}
+                    onChangeText={onChangeText}
                 />) : (
                 <TextInput
                     placeholder={label}
                     placeholderTextColor={'gray'}
                     keyboardType={keyboardType}
                     style={styles.input}
+                    value={value}
+                    onChangeText={onChangeText}
                 />)
             }
             <TouchableOpacity onPress={fieldButtonFunction}>

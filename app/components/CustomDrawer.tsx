@@ -6,9 +6,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import images from '../assets/images';
 import { useNavigation } from '@react-navigation/native';
 import constants from '../constants/AppConstants';
+import { AuthContext } from '../providers/AuthContextProvider';
+import { useContext } from 'react';
 
 const CustomDrawer = (props) => {
     const navigation = useNavigation();
+    const { logout } = useContext(AuthContext);
     return (
         <View style={styles.container}>
             <DrawerContentScrollView {...props} contentContainerStyle={styles.contentContainer}>
@@ -29,7 +32,7 @@ const CustomDrawer = (props) => {
             </DrawerContentScrollView>
             <View style={styles.separator}>
                 <TouchableOpacity style={styles.footer}
-                    onPress={() => { navigation.navigate(constants.NAV_LOGIN) }}>
+                    onPress={() => { logout() }}>
                     <Ionicons name="exit-outline" color="black" size={22} />
                     <Text style={styles.signout}>Sign Out</Text>
                 </TouchableOpacity>
