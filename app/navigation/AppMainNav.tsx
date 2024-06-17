@@ -7,7 +7,7 @@ import { View, StyleSheet } from 'react-native';
 import { ActivityIndicator } from 'react-native';
 
 const AppMainNav = () => {
-    const { isLoading } = useContext(AuthContext);
+    const { isLoading, isLoggedIn } = useContext(AuthContext);
     if (isLoading) {
         return (
             <View style={styles.indicatorContainer}>
@@ -17,7 +17,7 @@ const AppMainNav = () => {
     }
     return (
         <NavigationContainer>
-            <AuthStack />
+            {isLoggedIn ? <AppStack /> : <AuthStack />}
         </NavigationContainer>
     );
 };

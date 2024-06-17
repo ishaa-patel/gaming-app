@@ -7,7 +7,7 @@ export class AsyncStorageService {
     async setLoginData(loginData: LoginData): Promise<void> {
         await this._setItem(StorageKeys.LOGIN_DATA, loginData);
     }
-    async getLoginData(): Promise<LoginData> {
+    async getLoginData() {
         const loginData = await this._getItem(StorageKeys.LOGIN_DATA);
         return JSON.parse(loginData) as LoginData;
     }
