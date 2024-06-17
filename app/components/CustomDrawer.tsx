@@ -32,7 +32,7 @@ const CustomDrawer = (props) => {
             </DrawerContentScrollView>
             <View style={styles.separator}>
                 <TouchableOpacity style={styles.footer}
-                    onPress={() => { logout() }}>
+                    onPress={() => { logout(); }}>
                     <Ionicons name="exit-outline" color="black" size={22} />
                     <Text style={styles.signout}>Sign Out</Text>
                 </TouchableOpacity>

@@ -7,19 +7,17 @@ import { View, StyleSheet } from 'react-native';
 import { ActivityIndicator } from 'react-native';
 
 const AppMainNav = () => {
-    const { isLoading, userLogin } = useContext(AuthContext);
+    const { isLoading } = useContext(AuthContext);
     if (isLoading) {
         return (
             <View style={styles.indicatorContainer}>
                 <ActivityIndicator size={'large'} />
             </View>
-        )
+        );
     }
     return (
         <NavigationContainer>
-            {userLogin !== null ?
-                <AppStack /> :
-                <AuthStack />}
+            <AuthStack />
         </NavigationContainer>
     );
 };

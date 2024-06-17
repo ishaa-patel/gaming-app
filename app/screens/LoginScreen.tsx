@@ -11,8 +11,8 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthContextProvider';
 
 const LoginScreen = ({ navigation }) => {
-    const [email, setEmail] = useState(null);
-    const [password, setPassword] = useState(null);
+    const [email, setEmail] = useState(undefined);
+    const [password, setPassword] = useState(undefined);
     const { login } = useContext(AuthContext);
     return (
         <SafeAreaView style={styles.container}>
@@ -46,7 +46,9 @@ const LoginScreen = ({ navigation }) => {
                     value={password}
                     onChangeText={text => setPassword(text)}
                 />
-                <CustomButton label={'LOGIN'} onPress={() => { login(email, password); }} />
+                <CustomButton label={'LOGIN'} onPress={() => {
+                    login(email, password);
+                }} />
                 <Text style={styles.loginWithTxt}>Or,Login With ..</Text>
                 <View style={styles.customLoginContainer}>
                     <TouchableOpacity style={styles.customLogin}>
