@@ -26,7 +26,7 @@ export class AsyncStorageService {
     private async _getItem(key: StorageKeys): Promise<string> {
         try {
             const value = await AsyncStorage.getItem(key);
-            return JSON.parse(value);
+            return value;
         } catch (e) {
             return null;
         }
