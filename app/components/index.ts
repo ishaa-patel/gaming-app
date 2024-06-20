@@ -5,6 +5,7 @@ import GamesList from './GamesList';
 import CustomDrawer from './CustomDrawer';
 import CustomInputField from './CustomInputField';
 import CustomButton from './CustomButton';
+import NavBar from './NavBar';
 export {
     BannerSlider,
     CustomSwitch,
@@ -12,4 +13,5 @@ export {
     CustomDrawer,
     CustomInputField,
     CustomButton,
+    NavBar,
 };
