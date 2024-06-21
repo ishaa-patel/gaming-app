@@ -4,15 +4,15 @@ import { LoginData } from '../interface';
 import { StorageKeys } from '../constants/StorageKeys';
 
 export class AsyncStorageService {
-    async setLoginData(loginData: LoginData): Promise<void> {
-        await this._setItem(StorageKeys.LOGIN_DATA, loginData);
+    setLoginData(loginData: LoginData) {
+        this._setItem(StorageKeys.LOGIN_DATA, loginData);
     }
-    async getLoginData() {
+    async getLoginData(): Promise<LoginData> {
         const loginData = await this._getItem(StorageKeys.LOGIN_DATA);
         return JSON.parse(loginData) as LoginData;
     }
-    async removeLoginData(): Promise<void> {
-        await this._removeItem(StorageKeys.LOGIN_DATA);
+    removeLoginData() {
+        this._removeItem(StorageKeys.LOGIN_DATA);
     }
 
     private async _setItem(key: StorageKeys, value: object): Promise<void> {
@@ -23,9 +23,9 @@ export class AsyncStorageService {
         }
     }
 
-    private async _getItem(key: StorageKeys): Promise<string> {
+    _getItem(key: StorageKeys): Promise<string> {
         try {
-            const value = await AsyncStorage.getItem(key);
+            const value = AsyncStorage.getItem(key);
             return value;
         } catch (e) {
             return null;
