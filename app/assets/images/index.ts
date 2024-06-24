@@ -3,6 +3,7 @@ const images = {
     introImg: require('./introImg.jpg'),
     bgImg: require('./bg-img.jpg'),
     userImg: require('./user.png'),
+    updateProfileImg: require('./update-profile-user.png'),
     marioImg: require('./super-mario.png'),
     subwayImg: require('./subway-surf.png'),
     birdsImg: require('./angry-birds.jpg'),
