@@ -19,7 +19,7 @@ const CustomDrawer = (props) => {
                     <Image source={images.userImg} style={styles.userimg} />
                     <View style={styles.userdetail}>
                         <Text style={styles.username}>User Name</Text>
-                        <TouchableOpacity onPress={() => navigation.navigate(constants.NAV_HOME)}>
+                        <TouchableOpacity onPress={() => navigation.navigate(constants.NAV_PROFILE)}>
                             <Text style={styles.updateprofile}>
                                 <Ionicons name="cloud-upload" size={15} />Update Profile
                             </Text>
