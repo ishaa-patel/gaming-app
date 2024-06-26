@@ -8,22 +8,24 @@ export const styles = StyleSheet.create({
         backgroundColor: '#ae0061',
     },
     userimg: {
-        height: 80,
-        width: 80,
+        height: 70,
+        width: 70,
         borderRadius: 40,
-        marginBottom: 10
+        marginBottom: 10,
+        backgroundColor: '#fff',
     },
     userdetail: {
         flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     username: {
         color: '#fff',
         fontSize: 16,
         marginHorizontal: 5,
     },
-    updateprofile: {
-        marginLeft: 30,
-        fontSize: 12,
+    updateProfile: {
+        fontWeight: 'bold',
+        fontSize: 10,
         color: '#fff',
     },
     drawerlist: {
