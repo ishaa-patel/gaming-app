@@ -1,3 +1,4 @@
 /* eslint-disable prettier/prettier */
 import { LoginData } from './Login';
-export type { LoginData };
+import { UpdateProfile } from './UpdateProfileRedux';
+export type { LoginData, UpdateProfile };
