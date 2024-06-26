@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import { AsyncStorageService } from '../service';
 import { LoginData } from '../interface';
 
@@ -18,28 +18,19 @@ export const AuthProvider = ({ children }) => {
         const loginValue: LoginData = {
             email: email,
             password: password,
-            isLogged: true,
+            isLogin: true,
         };
         setIsLoading(true);
         storage.setLoginData(loginValue);
         setIsLoading(false);
     };
-    const isLoggedIn = async () => {
-        const getLoginData = await storage.getLoginData();
-        if (getLoginData.isLogged === true) {
-            return true;
-        }
-    };
-    useEffect(() => {
-        isLoggedIn();
-    });
     const logout = () => {
         storage.removeLoginData();
         setIsLoading(false);
     };
     return (
-        <AuthContext.Provider value={{ login, logout, isLoading, isLoggedIn }}>
+        <AuthContext.Provider value={{ login, logout, isLoading }}>
             {children}
         </AuthContext.Provider>
     );
-}
+};
