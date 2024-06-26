@@ -8,6 +8,8 @@ export const styles = StyleSheet.create({
     userImg: {
         width: 35,
         height: 35,
+        backgroundColor: 'rgba(52,52,52,0.1)',
+        borderRadius: 25,
     },
     subContainer: {
         padding: 20,
@@ -32,6 +34,9 @@ export const styles = StyleSheet.create({
     searchIcon: {
         margin: 5,
         marginTop: 15,
+    },
+    searchInput: {
+        flex: 1,
     },
     searchBarBottomContainer: {
         flexDirection: 'row',
