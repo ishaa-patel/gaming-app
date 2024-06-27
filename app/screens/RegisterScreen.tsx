@@ -12,8 +12,8 @@ import { useState } from 'react';
 import constants from '../constants/AppConstants';
 
 const RegisterScreen = ({ navigation }) => {
-    const [date, setDate] = useState(new Date())
-    const [open, setOpen] = useState(false)
+    const [date, setDate] = useState(new Date());
+    const [open, setOpen] = useState(false);
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView style={styles.subcontainer} showsVerticalScrollIndicator={false}>
@@ -79,25 +79,25 @@ const RegisterScreen = ({ navigation }) => {
                         style={{ marginRight: 5, marginTop: 5 }}
                     />
                     <TouchableOpacity onPress={() => setOpen(true)}>
-                        <Text style={{ color: 'gray', marginLeft: 5, marginTop: 5 }}>Date-of-Birth</Text>
+                        <Text style={{ color: 'gray', marginLeft: 5, marginTop: 5 }}>{date ? date.valueOf() : 'Date-of-Birth'}</Text>
                     </TouchableOpacity>
                 </View>
-
                 <DatePicker
                     modal
+                    theme="light"
                     open={open}
                     date={date}
-                    mode='date'
+                    mode="date"
                     onConfirm={(date) => {
-                        setOpen(false)
-                        setDate(date)
+                        setOpen(false);
+                        setDate(date);
                     }}
                     onCancel={() => {
-                        setOpen(false)
+                        setOpen(false);
                     }}
                 />
                 <CustomButton label={'REGISTER'}
-                    onPress={() => { navigation.navigate(constants.NAV_LOGIN) }}
+                    onPress={() => { navigation.navigate(constants.NAV_LOGIN); }}
                 />
                 <View style={styles.registerContainer}>
                     <Text style={{ color: '#333' }}>Already Register?</Text>
