@@ -9,7 +9,7 @@ const MomentsScreen = () => {
     const fetchData = async () => {
         try {
             const response = await apiInstance.get(constants.POST_URL);
-            console.log('fetching data:', JSON.stringify(response));
+            console.log('fetching data:', JSON.stringify(response.data));
         }
         catch (err) {
             console.log('Error at fetching data:', err);
