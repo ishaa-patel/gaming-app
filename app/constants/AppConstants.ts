@@ -16,6 +16,7 @@ const constants = {
     NAV_MOMENTS: 'Moments',
     NAV_MESSAGE: 'Message',
     NAV_SETTING: 'Setting',
+    NAV_MOBX: 'Mobx',
 
     //Tab Navigation
     TAB_HOME: 'TabHome',
