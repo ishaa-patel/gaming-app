@@ -4,7 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { CustomDrawer } from '../components';
 import constants from '../constants/AppConstants';
 import TabNavigator from './TabNavigator';
-import { MessageScreen, MomentsScreen, ProfileScreen, SettingScreen } from '../screens';
+import { MessageScreen, MomentsScreen, ProfileScreen, SettingScreen, MobxPracScreen } from '../screens';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
@@ -47,6 +47,14 @@ const AppStack = () => {
                 options={{
                     drawerIcon: ({ color }) => (
                         <Ionicons name="timer-outline" color={color} size={26} />
+                    ),
+                }}
+            />
+            <Drawer.Screen name={constants.NAV_MOBX}
+                component={MobxPracScreen}
+                options={{
+                    drawerIcon: ({ color }) => (
+                        <Ionicons name="bar-chart-outline" color={color} size={26} />
                     ),
                 }}
             />
