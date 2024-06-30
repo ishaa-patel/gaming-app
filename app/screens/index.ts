@@ -10,6 +10,7 @@ import RegisterScreen from './RegisterScreen';
 import FavouriteScreen from './FavouriteScreen';
 import CartScreen from './CartScreen';
 import GameDetailScreen from './GameDetailScreen';
+import MobxPracScreen from './MobxPracScreen';
 export {
     HomeScreen,
     OnBoardingScreen,
@@ -22,4 +23,5 @@ export {
     FavouriteScreen,
     CartScreen,
     GameDetailScreen,
+    MobxPracScreen,
 };
